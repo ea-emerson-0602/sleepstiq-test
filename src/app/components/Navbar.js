@@ -57,7 +57,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
-          <div className="absolute top-[96px] left-0 right-0 bg-white shadow-lg py-4 px-6 z-50">
+          <div className="w-screen bg-white shadow-lg py-4 px-6 z-50">
             {navItems.map(({ href, label }) => (
               <Link
                 key={href}
