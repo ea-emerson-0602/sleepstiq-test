@@ -2,7 +2,7 @@ import React from "react";
 
 function ProductCard({ product }) {
   return (
-    <div className="bg-white flex flex-col justify-between rounded-lg w-[45vw] h-[45vh] lg:w-[22vw] lg:h-[60vh] shadow-[15px_25px_50px_rgba(0,0,0,0.12)] text-[#4D533C]">
+    <div className="bg-white flex flex-col justify-between rounded-lg w-[48vw] h-[45vh] lg:w-[22vw] lg:h-[60vh] shadow-[15px_25px_50px_rgba(0,0,0,0.12)] text-[#4D533C]">
       {/* Image Container with Fixed Height */}
       <div
         className="lg:h-[30vh] h-[20vh] w-full bg-cover bg-center overflow-hidden"
