@@ -138,7 +138,7 @@ export default function FAQ() {
         <div className="space-y-6 text-xl">
           <p>We&apos;re here to help you</p>
           <p className="font-bold text-6xl">How can we assist?</p>
-          <div className="flex items-center bg-white px-12 space-x-6 py-3 w-3/4 rounded-md">
+          <div className="flex items-center bg-white px-12 space-x-6 py-3 md:w-4/5 w-full lg:w-3/4 rounded-md">
             <FaSearch className="text-black w-5 h-5" />
             <input
               type="text"
