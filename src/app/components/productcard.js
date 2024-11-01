@@ -10,7 +10,7 @@ function ProductCard({ product }) {
         aria-label="Product Image"
       ></div>
 
-      <div className="flex flex-col flex-grow justify-between p-3 lg:p-6">
+      <div className="flex flex-col flex-grow justify-between p-4 lg:p-6">
         {/* Product review */}
         <p className="italic mb-2 break-words flex-grow">{product.text}</p>
 
