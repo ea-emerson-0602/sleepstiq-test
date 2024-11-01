@@ -6,7 +6,7 @@ import { FaSortUp, FaSortDown } from "react-icons/fa";
 import Button from "../components/button";
 import ReviewSection from "../components/reviewsection";
 import slider1 from "../assets/slider1.png";
-import slider2 from "../assets/slider2.png";
+import slider2 from "../assets/homebg.png";
 export default function Shop() {
   const [activeSlide, setActiveSlide] = useState(0);
   const slides = [slider1.src, slider2.src];
