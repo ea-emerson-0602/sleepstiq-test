@@ -24,12 +24,12 @@ export default function Home() {
           <Navbar />
         </nav>
         <div
-          className="min-h-[70vh] lg:min-h-screen w-screen border-4 lg:w-full bg-cover bg-center overflow-hidden py-8 px-4  lg:px-6 lg:p-32"
+          className="h-[70vh] lg:h-screen w-screen border-4 lg:w-full bg-cover bg-center overflow-hidden py-8 px-4  lg:px-6 lg:p-32"
           style={{ backgroundImage: `url(${homebg.src})` }}
           aria-label="Profile Picture"
         >
           <div className="lg:flex hidden lg:flex-col  gap-y-5 lg:gap-y-8 text-xl w-full lg:w-[40vw]">
-            <p className="my-auto">We're here to help you</p>
+            <p className="my-auto">We&apos;re here to help you</p>
             <p className="font-bold text-5xl lg:text-7xl">Relax & Rest</p>
             <p className="">
               With the aid of our Melatonin SleepStiq, we can assure you that
@@ -39,11 +39,13 @@ export default function Home() {
               <Button>Visit Shop</Button>
             </Link>
           </div>
-          <div className="flex items-center justify-center min-h-screen lg:hidden">
+          <div className="flex items-center justify-center h-[70vh] lg:hidden">
             <div className="flex flex-col gap-y-4 my-auto text-center">
-              <p className="my-auto">We're here to help you</p>
+              <p className="my-auto font-semibold text-lg">
+                We&apos;re here to help you
+              </p>
               <p className="font-bold text-5xl lg:text-7xl">Relax & Rest</p>
-              <p className="">
+              <p className="font-semibold text-lg">
                 With the aid of our Melatonin SleepStiq, we can assure you that
                 you can get quality sleep.
               </p>
@@ -102,9 +104,9 @@ export default function Home() {
             10k+ Happ<span className="bg-test pt-0 pr-2 pb-4">y Customers</span>
           </p>
           <p className="">
-            There's no secret source. No wizard behind the curtain. What makes
-            aerolab tick is an is an interdisciplinary team with a framework
-            that fosters candid collaboration.
+            There&apos;s no secret source. No wizard behind the curtain. What
+            makes aerolab tick is an is an interdisciplinary team with a
+            framework that fosters candid collaboration.
           </p>
           <Link href="/about">
             <p className="font-bold flex items-center">
@@ -115,8 +117,8 @@ export default function Home() {
         </div>
         <div className="flex flex-col md:gap-y-20 gap-y-12 lg:gap-y-28 bg-card w-full lg:w-[40vw] p-6 shadow-[0px_60px_40px_7px_rgba(0,0,0,0.1)]">
           <p className="italic lg:text-xl text-[#4D533C]">
-            I'm a very anxious person but use this and feel so relaxed and sleep
-            way better now with the aid of sleepstiq.
+            I&apos;m a very anxious person but use this and feel so relaxed and
+            sleep way better now with the aid of sleepstiq.
           </p>
           <div className="flex flex-col gap-y-2">
             <div className="flex gap-x-8">
@@ -175,30 +177,32 @@ export default function Home() {
           </ul>
         </div>
         <ul class="grid lg:hidden gap-1 text-italic my-4 shadow-[30px_30px_40px_rgba(0,0,0,0.12)] bg-white text-sm rounded-lg p-6 ">
-            <li class="grid grid-cols-[24px_1fr] items-center">
-              <span>😊</span>
-              <span className="italic">Promotes calm and relaxation.</span>
-            </li>
-            <li class="grid grid-cols-[24px_1fr] items-center">
-              <span>💤</span>
-              <span className="italic">
-                Inhalation allows for a rapid effect.
-              </span>
-            </li>
-            <li class="grid grid-cols-[24px_1fr] items-center">
-              <span>✅</span>
-              <span className="italic">
-                100% drug-free, plant-based ingredients.
-              </span>
-            </li>
-            <li class="grid grid-cols-[24px_1fr] items-center">
-              <span></span>
-              <span className="italic">3rd-party lab tested.</span>
-            </li>
-          </ul>
-        
+          <li class="grid grid-cols-[24px_1fr] items-center">
+            <span>😊</span>
+            <span className="italic">Promotes calm and relaxation.</span>
+          </li>
+          <li class="grid grid-cols-[24px_1fr] items-center">
+            <span>💤</span>
+            <span className="italic">
+              Inhalation allows for a rapid effect.
+            </span>
+          </li>
+          <li class="grid grid-cols-[24px_1fr] items-center">
+            <span>✅</span>
+            <span className="italic">
+              100% drug-free, plant-based ingredients.
+            </span>
+          </li>
+          <li class="grid grid-cols-[24px_1fr] items-center">
+            <span></span>
+            <span className="italic">3rd-party lab tested.</span>
+          </li>
+        </ul>
+
         <div className="flex flex-col text-justify lg:my-auto my-6 gap-y-8">
-          <p className="font-bold text-3xl mb-3">Shop Now</p>
+          <p className="font-bold text-3xl mb-3 text-center lg:text-left">
+            Shop Now
+          </p>
           <p className="text-sm ">
             Our Personal Diffuser is an aromatherapy device that contains a
             blend of melatonin, lavender, and chamomile. A few breaths of our
@@ -210,9 +214,14 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <section className="flex flex-col lg:flex-row p-6 lg:pl-32 gap-x-32 " id="mission">
+      <section
+        className="flex flex-col lg:flex-row p-6 lg:p-0 lg:pl-32 gap-x-32 "
+        id="mission"
+      >
         <div className="flex flex-col my-auto gap-y-5 lg:gap-y-8 lg:w-4/5">
-          <p className="font-bold text-3xl">Our Mission</p>
+          <p className="font-bold text-3xl text-center lg:text-left">
+            Our Mission
+          </p>
           <p className="text-sm text-justify">
             We started Sleepstiq with 1 simple goal: to be your best friend at
             bedtime. We, just like you, deal with stress, unease, and trouble
@@ -227,14 +236,16 @@ export default function Home() {
           </ul>
         </div>
         <div
-          className="lg:h-[70vh] h-[35vh] w-full bg-cover bg-center lg:px-32"
+          className="lg:h-[70vh] h-[35vh] w-full bg-cover bg-center my-6 lg:px-32"
           style={{ backgroundImage: `url(${mission.src})` }}
           aria-label="Profile Picture"
         ></div>
       </section>
-      <section className="flex text-sm gap-y-8 flex-col p-24 items-center  justify-center text-center">
-        <p className="font-bold text-3xl">Visit Our Shop</p>
-        <p className="w-3/5">
+      <section className="flex text-sm gap-y-8 flex-col p-6 lg:p-24 mb-8 lg:mb-0 items-center  justify-center text-center">
+        <p className="font-bold text-3xl text-center lg:text-left">
+          Visit Our Shop
+        </p>
+        <p className="lg:w-3/5 w-full">
           Our Personal Diffuser is an aromatherapy device that contains a blend
           of melatonin, lavender, and chamomile. A few breaths of our
           plant-based essential oil mist will mellow you out, quiet the mind,
@@ -244,9 +255,11 @@ export default function Home() {
           <Button>Visit Shop</Button>
         </Link>
       </section>
-      <section id="products" className="text-[#4D533C] mb-24">
-        <div className="border-t-2 mb-12 mx-32 "></div>
-        <p className="font-bold text-3xl px-32">Product Reviews</p>
+      <section id="products" className="text-[#4D533C] md:mb-16 lg:mb-24">
+        <div className="border-t-2 py-4 lg:py-0 md:mb-8 mb-4 lg:mb-12 lg:mx-32 md:mx-12 mx-6 "></div>
+        <p className="font-bold text-3xl text-center lg:text-left lg:px-32">
+          Product Reviews
+        </p>
         <ProductSection />
       </section>
     </main>

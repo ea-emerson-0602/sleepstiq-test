@@ -11,7 +11,7 @@ const faqData = {
         id: "q1",
         question: "Q1: How does it work?",
         answer:
-          "Sleepstiq works through a gentle inhalation process that delivers melatonin directly to your system. The natural ingredients work with your body's own sleep-wake cycle to promote restful sleep.",
+          "Inhaling on the diffuser will turn the inside liquids (melatonin, lavender, chamomile) into a light mist which you inhale, and then exhale out your nose. Inhaling the melatonin allows for a near-instant effect, and also allows you to experience the soothing aromatherapeutic effect of lavender and chamomile.",
       },
       {
         id: "q2",
@@ -134,7 +134,7 @@ export default function FAQ() {
   };
   return (
     <div className="flex flex-col">
-      <div className=" bg-card w-full py-40 px-32">
+      <div className=" bg-card hidden lg:block w-full py-40 px-32">
         <div className="space-y-6 text-xl">
           <p>We&apos;re here to help you</p>
           <p className="font-bold text-6xl">How can we assist?</p>
@@ -148,9 +148,24 @@ export default function FAQ() {
           </div>
         </div>
       </div>
-      <div className="flex gap-12 p-12 w-full mx-auto">
+      <div className=" bg-card px-6 lg:hidden block pb-16 pt-32 w-full ">
+        <div className="space-y-6 text-center text-xl">
+          {/* <p>We&apos;re here to help you</p> */}
+          <p className="font-bold text-5xl">How can we assist?</p>
+          <div className="flex items-center bg-white px-12 mx-auto space-x-6 py-3 w-3/4 rounded-md">
+            <FaSearch className="text-black w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search FAQs here"
+              className="ml-2 text-sm bg-white w-full text-mainText focus:outline-none border-none"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-12 p-12 w-full mx-auto">
         {/* Topics Sidebar */}
-        <ul>
+        <ul className="hidden lg:block">
           {Object.keys(faqData).map((topic, index) => (
             <li
               key={topic}
@@ -173,6 +188,20 @@ export default function FAQ() {
             </li>
           ))}
         </ul>
+        <ul className="flex justify-between lg:hidden">
+          {Object.keys(faqData).map((topic, index) => (
+            <li
+              key={topic}
+              onClick={() => setActiveTopic(topic)}
+              className={`cursor-pointer mb-4 transition-colors hover:font-semibold ${
+                activeTopic === topic ? "font-bold" : "font-normal"
+              }`}
+            >
+              {topic}
+            </li>
+          ))}
+        </ul>
+
         {/* Questions Section */}
         <div className="flex-1">
           <div className="border-y-[1px]">

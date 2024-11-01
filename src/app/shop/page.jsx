@@ -26,24 +26,30 @@ export default function Shop() {
   };
 
   const decrement = () => {
-    if (count > 0) {
-      setCount((prev) => prev - 1);
-    }
+    setCount((prev) => (prev > 0 ? prev - 1 : 0));
   };
+
   return (
     <div>
       <div
-        className="min-h-screen w-full bg-cover bg-center overflow-hidden p-40 px-32 transition-all duration-1000"
+        className="lg:h-screen h-[70vh] w-full bg-cover bg-center overflow-hidden lg:p-40 lg:px-32 transition-all duration-1000"
         style={{ backgroundImage: `url(${slides[activeSlide]})` }}
         aria-label="Slider"
       >
-        <div className="space-y-6 text-xl">
+        <div className="space-y-6 hidden lg:block text-xl">
           <p>We&apos;re here for you</p>
           <p className="font-bold text-6xl">Relax & Rest</p>
         </div>
+        <div className="flex items-center justify-center h-[80vh] lg:hidden">
+          <div className="flex flex-col  my-auto text-center">
+            <p className="my-auto text-xl font-semibold">We&apos;re here to help you</p>
+            <p className="font-bold text-5xl">Relax & Rest</p>
+            
+          </div>
+        </div>
       </div>
-      <div className="flex justify-between mx-32 py-24 border-b-[1px]">
-        <div>
+      <div className="flex flex-col lg:flex-row justify-between mx-8 pt-4 lg:pt-0 lg:mx-32 md:py-16 lg:py-24 border-b-[1px]">
+        <div className="hidden lg:block">
           <Image
             src={vape.src}
             alt="product image"
@@ -51,7 +57,12 @@ export default function Shop() {
             height={1000}
           />
         </div>
-        <div className="ml-48 mr-24 text-sm">
+        <div
+          className="block lg:hidden rounded-xl h-[35vh] w-full bg-cover bg-center my-6"
+          style={{ backgroundImage: `url(${vape.src})` }}
+          aria-label="Profile Picture"
+        ></div>
+        <div className="lg:ml-48 lg:mr-24 text-sm">
           <p className="header">About Product</p>
           <p className="text-greyText">
             Our Personal Diffuser is an aromatherapy device that contains a
@@ -85,8 +96,14 @@ export default function Shop() {
             <div class="self-center">Price</div>
             <div class="self-center">Unit</div>
             <div class="font-bold self-center">USD 50</div>
-            <div class="py-2 px-4 gap-x-4 flex items-center border-[1px] border-mainText w-fit rounded-md">
-              {count}{" "}
+            <div className="py-2 px-4 gap-x-4 flex items-center border-[1px] border-mainText w-fit rounded-md">
+              <span className="lg:flex hidden">{count}{" "}</span>
+              <input
+                type="number"
+                value={count}
+                onChange={(e) => setCount(Number(e.target.value))}
+                className="w-12 text-center border-none outline-none appearance-none flex lg:hidden"
+              />
               <div className="text-mainText flex flex-col -space-y-2">
                 <FaSortUp onClick={increment} className="cursor-pointer" />
                 <FaSortDown onClick={decrement} className="cursor-pointer" />
@@ -98,7 +115,7 @@ export default function Shop() {
           </div>
         </div>
       </div>
-      <div className="ml-32 py-10">
+      <div className="lg:ml-32 lg:py-10">
         <ReviewSection />
       </div>
     </div>

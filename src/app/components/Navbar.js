@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full text-mainText py-6">
+    <nav className="w-full text-mainText bg-white lg:bg-transparent py-6">
       {/* Desktop Navigation */}
       <div className="hidden lg:flex items-center pl-24 gap-x-16">
         <div className="mx-16">
@@ -40,7 +40,7 @@ const Navbar = () => {
       </div>
 
       {/* Tablet and Mobile Navigation */}
-      <div className="lg:hidden">
+      <div className="lg:hidden ">
         <div className="flex items-center justify-between w-screen px-6">
           <Image src={logowithname} width={60} height={60} className="mx-auto" alt="Logo" />
           <button

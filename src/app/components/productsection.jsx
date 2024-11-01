@@ -41,7 +41,7 @@ const products = [
 
 function ProductSection() {
     return (
-      <div className="overflow-x-auto hide-scrollbar ml-32 h-fit pt-6 pb-24">
+      <div className="overflow-x-auto hide-scrollbar mx-6 lg:mx-0 lg:ml-32 h-fit pt-6 pb-20 lg:pb-24">
         <div className="flex gap-10 ">
           {products.map((product, index) => (
             <div key={index} className="w-fit h-fit">
