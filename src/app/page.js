@@ -19,18 +19,18 @@ import influenciveLogo from "./assets/influencivelogo.png";
 export default function Home() {
   return (
     <main className="">
-      <section className="mb-20 relative">
+      <section className="lg:mb-20 md:mb-12  relative">
         <nav className="absolute">
           <Navbar />
         </nav>
         <div
-          className="min-h-screen w-full bg-cover bg-center overflow-hidden p-32"
+          className="min-h-[70vh] lg:min-h-screen w-screen border-4 lg:w-full bg-cover bg-center overflow-hidden py-8 px-4  lg:px-6 lg:p-32"
           style={{ backgroundImage: `url(${homebg.src})` }}
           aria-label="Profile Picture"
         >
-          <div className="flex flex-col gap-y-8 text-xl w-[40vw]">
-            <p className="">We're here to help you</p>
-            <p className="font-bold text-7xl">Relax & Rest</p>
+          <div className="lg:flex hidden lg:flex-col  gap-y-5 lg:gap-y-8 text-xl w-full lg:w-[40vw]">
+            <p className="my-auto">We're here to help you</p>
+            <p className="font-bold text-5xl lg:text-7xl">Relax & Rest</p>
             <p className="">
               With the aid of our Melatonin SleepStiq, we can assure you that
               you can get quality sleep.
@@ -39,8 +39,21 @@ export default function Home() {
               <Button>Visit Shop</Button>
             </Link>
           </div>
+          <div className="flex items-center justify-center min-h-screen lg:hidden">
+            <div className="flex flex-col gap-y-4 my-auto text-center">
+              <p className="my-auto">We're here to help you</p>
+              <p className="font-bold text-5xl lg:text-7xl">Relax & Rest</p>
+              <p className="">
+                With the aid of our Melatonin SleepStiq, we can assure you that
+                you can get quality sleep.
+              </p>
+              <Link href="/shop">
+                <Button>Visit Shop</Button>
+              </Link>
+            </div>
+          </div>
 
-          <div className="absolute bottom-0 z-50 left-0 w-[90.5%] shadow-[20px_60px_50px_rgba(0,0,0,0.13)] ml-32 bg-white flex items-center space-x-8 transform translate-y-1/2  pl-16 py-6 ">
+          <div className="absolute hidden lg:flex bottom-0 z-50 left-0 w-[90.5%] shadow-[20px_60px_50px_rgba(0,0,0,0.13)] ml-32 bg-white items-center space-x-8 transform translate-y-1/2  pl-16 py-6 ">
             <Image
               src={googleLogo}
               alt="Google Logo"
@@ -79,10 +92,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="happy" className="flex p-32 gap-x-8 ">
-        <div className="flex flex-col gap-y-6 py-6 mr-24 text-sm">
+      <section
+        id="happy"
+        className="flex flex-col lg:flex-row md:p-16 p-8 lg:p-32 gap-x-8 "
+      >
+        <div className="flex flex-col gap-y-3 lg:gap-y-6 py-6 lg:mr-24 text-sm">
           <p className="">Our Amazing Story</p>
-          <p className="font-bold text-3xl mb-6">
+          <p className="font-bold text-3xl my-3 lg:mb-6">
             10k+ Happ<span className="bg-test pt-0 pr-2 pb-4">y Customers</span>
           </p>
           <p className="">
@@ -97,8 +113,8 @@ export default function Home() {
             </p>
           </Link>
         </div>
-        <div className="flex flex-col gap-y-28 bg-card  w-[40vw] p-6 shadow-[0px_60px_40px_7px_rgba(0,0,0,0.1)]">
-          <p className="italic text-xl text-[#4D533C]">
+        <div className="flex flex-col md:gap-y-20 gap-y-12 lg:gap-y-28 bg-card w-full lg:w-[40vw] p-6 shadow-[0px_60px_40px_7px_rgba(0,0,0,0.1)]">
+          <p className="italic lg:text-xl text-[#4D533C]">
             I'm a very anxious person but use this and feel so relaxed and sleep
             way better now with the aid of sleepstiq.
           </p>
@@ -128,14 +144,14 @@ export default function Home() {
       </section>
       <section
         id="shopnow"
-        className="flex m-32 mt-8  pt-12 border-t-2 gap-x-24 "
+        className="lg:flex-row flex flex-col lg:m-32 lg:mt-8 m-6 pt-6 lg:pt-12 border-t-2 gap-x-24 "
       >
         <div
-          className="min-h-[75vh] relative w-full bg-cover bg-center px-32"
+          className="lg:h-[75vh] h-[35vh] lg:relative w-full bg-cover bg-center px-32"
           style={{ backgroundImage: `url(${vape.src})` }}
           aria-label="Profile Picture"
         >
-          <ul class="grid gap-1 text-italic absolute bottom-0 -right-8 my-4 shadow-[30px_30px_40px_rgba(0,0,0,0.12)] bg-white text-sm rounded-lg p-6 pr-20">
+          <ul class="lg:grid gap-1 text-italic hidden lg:absolute bottom-0 lg:-right-8 my-4 shadow-[30px_30px_40px_rgba(0,0,0,0.12)] bg-white text-sm  rounded-lg p-6 lg:pr-20">
             <li class="grid grid-cols-[24px_1fr] items-center">
               <span>😊</span>
               <span className="italic">Promotes calm and relaxation.</span>
@@ -158,7 +174,30 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col text-justify my-auto gap-y-8">
+        <ul class="grid lg:hidden gap-1 text-italic my-4 shadow-[30px_30px_40px_rgba(0,0,0,0.12)] bg-white text-sm rounded-lg p-6 ">
+            <li class="grid grid-cols-[24px_1fr] items-center">
+              <span>😊</span>
+              <span className="italic">Promotes calm and relaxation.</span>
+            </li>
+            <li class="grid grid-cols-[24px_1fr] items-center">
+              <span>💤</span>
+              <span className="italic">
+                Inhalation allows for a rapid effect.
+              </span>
+            </li>
+            <li class="grid grid-cols-[24px_1fr] items-center">
+              <span>✅</span>
+              <span className="italic">
+                100% drug-free, plant-based ingredients.
+              </span>
+            </li>
+            <li class="grid grid-cols-[24px_1fr] items-center">
+              <span></span>
+              <span className="italic">3rd-party lab tested.</span>
+            </li>
+          </ul>
+        
+        <div className="flex flex-col text-justify lg:my-auto my-6 gap-y-8">
           <p className="font-bold text-3xl mb-3">Shop Now</p>
           <p className="text-sm ">
             Our Personal Diffuser is an aromatherapy device that contains a
@@ -171,8 +210,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <section className="flex  pl-32 gap-x-32 " id="mission">
-        <div className="flex flex-col my-auto gap-y-8 w-4/5">
+      <section className="flex flex-col lg:flex-row p-6 lg:pl-32 gap-x-32 " id="mission">
+        <div className="flex flex-col my-auto gap-y-5 lg:gap-y-8 lg:w-4/5">
           <p className="font-bold text-3xl">Our Mission</p>
           <p className="text-sm text-justify">
             We started Sleepstiq with 1 simple goal: to be your best friend at
@@ -188,7 +227,7 @@ export default function Home() {
           </ul>
         </div>
         <div
-          className="min-h-[70vh] w-full bg-cover bg-center px-32"
+          className="lg:h-[70vh] h-[35vh] w-full bg-cover bg-center lg:px-32"
           style={{ backgroundImage: `url(${mission.src})` }}
           aria-label="Profile Picture"
         ></div>
