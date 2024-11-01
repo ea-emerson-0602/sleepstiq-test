@@ -193,7 +193,7 @@ export default function FAQ() {
             <li
               key={topic}
               onClick={() => setActiveTopic(topic)}
-              className={`cursor-pointer mb-4 transition-colors hover:font-semibold ${
+              className={`cursor-pointer mb-4 text-sm transition-colors hover:font-semibold ${
                 activeTopic === topic ? "font-bold" : "font-normal"
               }`}
             >

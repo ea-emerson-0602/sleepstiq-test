@@ -48,21 +48,18 @@ export default function Shop() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between mx-8 pt-4 lg:pt-0 lg:mx-32 md:py-16 lg:py-24 border-b-[1px]">
-        <div className="hidden lg:block">
-          <Image
-            src={vape.src}
-            alt="product image"
-            width={1000}
-            height={1000}
-          />
-        </div>
+      <div className="flex flex-col lg:flex-row justify-between mx-8 pt-4  lg:mx-32 md:py-8 lg:py-12 border-b-[1px]">
+      <div
+          className=" lg:block hidden rounded-xl h-[70vh] w-[75%] bg-cover bg-center my-6"
+          style={{ backgroundImage: `url(${vape.src})` }}
+          aria-label="Product Picture"
+        ></div>
         <div
           className="block lg:hidden rounded-xl h-[35vh] w-full bg-cover bg-center my-6"
           style={{ backgroundImage: `url(${vape.src})` }}
-          aria-label="Profile Picture"
+          aria-label="Product Picture"
         ></div>
-        <div className="lg:ml-48 lg:mr-24 text-sm">
+        <div className="lg:ml-48 lg:mr-24 lg:w-2/3 lg:mt-[136px] text-sm">
           <p className="header">About Product</p>
           <p className="text-greyText">
             Our Personal Diffuser is an aromatherapy device that contains a

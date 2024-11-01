@@ -24,7 +24,7 @@ export default function Home() {
           <Navbar />
         </nav>
         <div
-          className="h-[70vh] lg:h-screen w-screen border-4 lg:w-full bg-cover bg-center overflow-hidden py-8 px-4  lg:px-6 lg:p-32"
+          className="h-[70vh] lg:h-screen w-screen border-4 lg:w-full bg-cover bg-center overflow-hidden py-8 px-4   lg:p-32"
           style={{ backgroundImage: `url(${homebg.src})` }}
           aria-label="Profile Picture"
         >
@@ -98,12 +98,12 @@ export default function Home() {
         id="happy"
         className="flex flex-col lg:flex-row md:p-16 p-8 lg:p-32 gap-x-8 "
       >
-        <div className="flex flex-col gap-y-3 lg:gap-y-6 py-6 lg:mr-24 text-sm">
+        <div className="flex flex-col gap-y-3 lg:gap-y-6 py-6 lg:w-4/5 lg:mr-32 text-sm">
           <p className="">Our Amazing Story</p>
           <p className="font-bold text-3xl my-3 lg:mb-6">
             10k+ Happ<span className="bg-test pt-0 pr-2 pb-4">y Customers</span>
           </p>
-          <p className="">
+          <p className="text-[#7A888E]">
             There&apos;s no secret source. No wizard behind the curtain. What
             makes aerolab tick is an is an interdisciplinary team with a
             framework that fosters candid collaboration.
@@ -115,7 +115,7 @@ export default function Home() {
             </p>
           </Link>
         </div>
-        <div className="flex flex-col md:gap-y-20 gap-y-12 lg:gap-y-28 bg-card w-full lg:w-[40vw] p-6 shadow-[0px_60px_40px_7px_rgba(0,0,0,0.1)]">
+        <div className="flex flex-col md:gap-y-20 gap-y-12 lg:gap-y-24 bg-card w-full lg:w-[40vw] p-6 shadow-[0px_60px_40px_7px_rgba(0,0,0,0.1)]">
           <p className="italic lg:text-xl text-[#4D533C]">
             I&apos;m a very anxious person but use this and feel so relaxed and
             sleep way better now with the aid of sleepstiq.
@@ -141,7 +141,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="">
+      <section className="lg:ml-32">
         <ReviewSection />
       </section>
       <section
@@ -199,17 +199,17 @@ export default function Home() {
           </li>
         </ul>
 
-        <div className="flex flex-col text-justify lg:my-auto my-6 gap-y-8">
+        <div className="flex flex-col text-justify lg:w-4/5 lg:mt-24 my-6 gap-y-8">
           <p className="font-bold text-3xl mb-3 text-center lg:text-left">
             Shop Now
           </p>
-          <p className="text-sm ">
+          <p className="text-sm text-[#7A888E]">
             Our Personal Diffuser is an aromatherapy device that contains a
             blend of melatonin, lavender, and chamomile. A few breaths of our
             plant-based essential oil mist will mellow you out, quiet the mind,
             and lull you to bed.
           </p>
-          <Link href="/shop">
+          <Link href="/shop" className="mx-auto lg:mx-0">
             <Button>Visit Shop</Button>
           </Link>
         </div>
@@ -222,7 +222,7 @@ export default function Home() {
           <p className="font-bold text-3xl text-center lg:text-left">
             Our Mission
           </p>
-          <p className="text-sm text-justify">
+          <p className="text-sm text-justify text-[#7A888E]">
             We started Sleepstiq with 1 simple goal: to be your best friend at
             bedtime. We, just like you, deal with stress, unease, and trouble
             sleeping from a number of silly things like school, work, screens,
@@ -245,7 +245,7 @@ export default function Home() {
         <p className="font-bold text-3xl text-center lg:text-left">
           Visit Our Shop
         </p>
-        <p className="lg:w-3/5 w-full">
+        <p className="lg:w-3/5 w-full text-[#7A888E]">
           Our Personal Diffuser is an aromatherapy device that contains a blend
           of melatonin, lavender, and chamomile. A few breaths of our
           plant-based essential oil mist will mellow you out, quiet the mind,

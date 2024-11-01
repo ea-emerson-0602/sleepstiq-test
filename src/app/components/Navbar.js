@@ -30,7 +30,7 @@ const Navbar = () => {
               key={href}
               href={href}
               className={`px-3 py-2 rounded-md font-medium transition-all duration-300
-                ${pathname === href ? "font-black" : ""}
+                ${pathname === href ? "font-[800]" : ""}
                 hover:bg-gray-100 active:scale-95`}
             >
               {label}
