@@ -8,13 +8,23 @@ import Link from "next/link";
 import Button from "./components/button";
 import ReviewSection from "./components/reviewsection";
 import ProductSection from "./components/productsection";
+import { FaCaretRight } from "react-icons/fa";
+import Navbar from "./components/Navbar";
+import googleLogo from "./assets/googlelogo.png";
+import forbesLogo from "./assets/forbeslogo.png";
+import bloombergLogo from "./assets/bloomberglogo.png";
+import sleepReviewLogo from "./assets/sleepreviewlogo.png";
+import influenciveLogo from "./assets/influencivelogo.png";
 
 export default function Home() {
   return (
     <main className="">
-      <section>
+      <section className="mb-20 relative">
+        <nav className="absolute">
+          <Navbar />
+        </nav>
         <div
-          className="min-h-screen w-full bg-cover bg-center overflow-hidden px-32"
+          className="min-h-screen w-full bg-cover bg-center overflow-hidden p-32"
           style={{ backgroundImage: `url(${homebg.src})` }}
           aria-label="Profile Picture"
         >
@@ -30,15 +40,41 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Logo positioned at the bottom, halfway out of the div */}
-          <div className="absolute bottom-0 left-0 w-full transform translate-y-1/2">
+          <div className="absolute bottom-0 z-50 left-0 w-[90.5%] shadow-[20px_60px_50px_rgba(0,0,0,0.13)] ml-32 bg-white flex items-center space-x-8 transform translate-y-1/2  pl-16 py-6 ">
             <Image
-              src={compLogo}
-              alt="Company Logo"
-              width={0} // Width and height attributes set to 0 to avoid hardcoding size
+              src={googleLogo}
+              alt="Google Logo"
+              width={150}
               height={0}
-              sizes="100vw" // Sets image width to 100% of the viewport width
-              style={{ width: "100%", height: "auto" }}
+              className="object-contain"
+            />
+            <Image
+              src={forbesLogo}
+              alt="Forbes Logo"
+              width={150}
+              height={10}
+              className="object-contain"
+            />
+            <Image
+              src={bloombergLogo}
+              alt="Bloomberg Logo"
+              width={220}
+              height={0}
+              className="object-contain "
+            />
+            <Image
+              src={sleepReviewLogo}
+              alt="Sleep Review Logo"
+              width={220}
+              height={0}
+              className="object-contain"
+            />
+            <Image
+              src={influenciveLogo}
+              alt="Influencive Logo"
+              width={220}
+              height={0}
+              className="object-contain"
             />
           </div>
         </div>
@@ -46,24 +82,23 @@ export default function Home() {
       <section id="happy" className="flex p-32 gap-x-8 ">
         <div className="flex flex-col gap-y-6 py-6 mr-24 text-sm">
           <p className="">Our Amazing Story</p>
-          <p className="font-bold text-3xl mb-6">10k+ Happy Customers</p>
+          <p className="font-bold text-3xl mb-6">
+            10k+ Happ<span className="bg-test pt-0 pr-2 pb-4">y Customers</span>
+          </p>
           <p className="">
             There's no secret source. No wizard behind the curtain. What makes
             aerolab tick is an is an interdisciplinary team with a framework
             that fosters candid collaboration.
           </p>
           <Link href="/about">
-            <p className="font-bold underline"> More know About us</p>
+            <p className="font-bold flex items-center">
+              <FaCaretRight />{" "}
+              <span className="underline">More know About us</span>
+            </p>
           </Link>
         </div>
-        <div
-          className="flex flex-col gap-y-28 bg-card  w-[40vw] p-6"
-          style={{
-            boxShadow:
-              "0px 10px 20px rgba(0, 0, 0, 0.1), 0px 40px 80px rgba(0, 0, 0, 0.15)",
-          }}
-        >
-          <p className="italic text-xl">
+        <div className="flex flex-col gap-y-28 bg-card  w-[40vw] p-6 shadow-[0px_60px_40px_7px_rgba(0,0,0,0.1)]">
+          <p className="italic text-xl text-[#4D533C]">
             I'm a very anxious person but use this and feel so relaxed and sleep
             way better now with the aid of sleepstiq.
           </p>
@@ -77,7 +112,7 @@ export default function Home() {
                 className="rounded-full"
               />
               <div className="">
-                <p className="font-bold text-lg">James Miller</p>
+                <p className="font-bold text-lg text-[#4D533C]">James Miller</p>
                 <p className="text-sm">CEO, techbias</p>
               </div>
             </div>
@@ -91,12 +126,38 @@ export default function Home() {
       <section className="">
         <ReviewSection />
       </section>
-      <section id="shopnow" className="flex p-32 gap-x-24 ">
+      <section
+        id="shopnow"
+        className="flex m-32 mt-8  pt-12 border-t-2 gap-x-24 "
+      >
         <div
-          className="min-h-[70vh] w-full bg-cover bg-center px-32"
+          className="min-h-[75vh] relative w-full bg-cover bg-center px-32"
           style={{ backgroundImage: `url(${vape.src})` }}
           aria-label="Profile Picture"
-        ></div>
+        >
+          <ul class="grid gap-1 text-italic absolute bottom-0 -right-8 my-4 shadow-[30px_30px_40px_rgba(0,0,0,0.12)] bg-white text-sm rounded-lg p-6 pr-20">
+            <li class="grid grid-cols-[24px_1fr] items-center">
+              <span>😊</span>
+              <span className="italic">Promotes calm and relaxation.</span>
+            </li>
+            <li class="grid grid-cols-[24px_1fr] items-center">
+              <span>💤</span>
+              <span className="italic">
+                Inhalation allows for a rapid effect.
+              </span>
+            </li>
+            <li class="grid grid-cols-[24px_1fr] items-center">
+              <span>✅</span>
+              <span className="italic">
+                100% drug-free, plant-based ingredients.
+              </span>
+            </li>
+            <li class="grid grid-cols-[24px_1fr] items-center">
+              <span></span>
+              <span className="italic">3rd-party lab tested.</span>
+            </li>
+          </ul>
+        </div>
         <div className="flex flex-col text-justify my-auto gap-y-8">
           <p className="font-bold text-3xl mb-3">Shop Now</p>
           <p className="text-sm ">
@@ -144,9 +205,9 @@ export default function Home() {
           <Button>Visit Shop</Button>
         </Link>
       </section>
-      <section id="products" className=" px-24">
-        <div className="border-t-2 mb-12"></div>
-        <p className="font-bold text-3xl">Product Reviews</p>
+      <section id="products" className="text-[#4D533C] mb-24">
+        <div className="border-t-2 mb-12 mx-32 "></div>
+        <p className="font-bold text-3xl px-32">Product Reviews</p>
         <ProductSection />
       </section>
     </main>

@@ -31,7 +31,7 @@ const reviews = [
 
 function ReviewSection() {
   return (
-    <div className="overflow-x-auto hide-scrollbar p-6">
+    <div className="overflow-x-auto hide-scrollbar ml-32 py-6">
       <div className="flex gap-8 ">
         {reviews.map((review, index) => (
           <div key={index} className="w-fit h-fit">

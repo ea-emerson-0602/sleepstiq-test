@@ -10,7 +10,12 @@ module.exports = {
       colors:{
         mainText:"#12305B",
         mainButton:"#FC5959",
-        card:"#FBF9F2"
+        card:"#FBF9F2",
+        secondaryBlue:"#8FE2FF",
+        greyText:"#ABABAB",
+        italic:"#5D6544",
+        test:"#FFFBE9",
+        rating:"#27AE60"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
