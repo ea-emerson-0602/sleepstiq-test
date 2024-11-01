@@ -3,7 +3,7 @@ import Button from "../components/button";
 import Link from "next/link";
 export default function About() {
   return (
-    <div className="w-full mx-auto lg:p-40 lg:px-32 space-y-8 text-center">
+    <div className="w-full mx-auto py-24 lg:py-0 px-8 lg:p-40 lg:px-32 space-y-8 text-center">
       <h1 className="text-4xl font-bold text-gray-800">Our Story</h1>
       <p className="text-lg text-gray-600">
         At SleepStiq, we are dedicated to helping you find peace, relaxation,
